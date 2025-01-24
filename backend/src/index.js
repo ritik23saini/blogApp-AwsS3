@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 //cors
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: ['https://blogapp-awss3.onrender.com', 'http://localhost:5173'],
     credentials: true,
 }));
 
@@ -45,5 +45,5 @@ app.use("*", (_, res) => {
 
 app.listen(Port, () => {
     connectDB();
-    console.log(`Server started at: http://localhost:${Port}`);
+    //console.log(`Server started at: http://localhost:${Port}`);
 });
