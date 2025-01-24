@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "backend": "nodemon backend/src/index.js",
-    "build": " npm run build --prefix frontend ",
-    "install": "npm install && npm  install --prefix frontend",
+    "build": " npm run install:all && npm run build --prefix frontend ",
+    "install:all": "npm install && npm  install --prefix frontend",
     "dev": "npm run backend && npm run dev --prefix frontend"
   },
   "keywords": [],
