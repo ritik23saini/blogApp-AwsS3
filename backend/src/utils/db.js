@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 export const connectDB = async () => {
-    const uri = 'mongodb+srv://username:password@cluster0.mongodb.net/mydatabase';
+    const uri = process.env.Mongodb_Url;
     mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
