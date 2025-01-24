@@ -32,7 +32,7 @@ app.use("/api", userRouter);
 app.use("/api/posts", upload.single('image'), postRouter);
 
 
-const Port = process.env.PORT || 8000;
+const Port = process.env.PORT || 8001;
 
 // Serve static files from the frontend build directory
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
