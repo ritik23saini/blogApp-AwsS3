@@ -1,3 +1,4 @@
+import e from "express";
 import Post from "../model/postmodel.js";
 import { deletefromS3, retrieveFrom_S3, uploadto_S3 } from "../utils/Aws_S3_service.js";
 
@@ -47,7 +48,7 @@ export const getAllPosts = async (req, res) => {
 
     } catch (error) {
         console.error("Error in getAllPosts:", error);
-        res.status(500).json({ message: "Server Error" });
+        res.status(500).json({ message: error.message });
     }
 };
 
