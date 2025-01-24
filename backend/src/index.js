@@ -22,7 +22,7 @@ app.use(cookieParser());
 
 //cors
 app.use(cors({
-    origin: 'https://blogapp-awss3.onrender.com/',
+    origin: 'http://localhost:5173',
     credentials: true,
 }));
 
